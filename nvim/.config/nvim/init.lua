@@ -52,7 +52,6 @@ require("plugins.tmux")
 -- require("plugins.stay-centered")
 
 require("plugins.language-specific.godot")
--- require("plugins.language-specific.openscad")
 -- require("plugins.language-specific.d2")
 
 require("plugins.sqlua")
@@ -60,6 +59,10 @@ require("plugins.sqlua")
 -- fun plugins
 -- require('plugins.fun.player-one')
 require("plugins.fun.tiny-glimmer")
+
+-- my plugins
+require("plugins.edit_config")
+require("plugins.move_with_fzf")
 
 -- base16 theme
 -- require("themes.mini-base16")
