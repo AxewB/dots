@@ -1,0 +1,60 @@
+# ------------------------------
+# Plugin manager (zinit)
+# ------------------------------
+ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
+source "$ZINIT_HOME/zinit.zsh"
+
+# ------------------------------
+# Environment
+# ------------------------------
+ZSH_CONFIG_DIR="$HOME/.config/zsh"
+export GSK_RENDERER=gl snapshot
+
+export PATH="$HOME/.local/share/minsh/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+export EDITOR=nvim
+
+export CMAKE_PREFIX_PATH=/opt/slint
+export LD_LIBRARY_PATH=/opt/slint/lib:$LD_LIBRARY_PATH
+# export PATH="$HOME/.local/share/minsh/bin:$PATH"
+
+# ------------------------------
+# History / keybinds
+# ------------------------------
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+
+# ------------------------------
+# Completion
+# ------------------------------
+autoload -Uz compinit
+compinit -C
+
+# ------------------------------
+# Tools initialization
+# ------------------------------
+command -v starship >/dev/null && eval "$(starship init zsh)"
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
+command -v try >/dev/null && eval "$(try init ~/Work/tries)"
+
+# -------------------------------
+# Imports
+# -------------------------------
+
+source "$ZSH_CONFIG_DIR/functions.zsh"
+source "$ZSH_CONFIG_DIR/plugins.zsh"
+source "$ZSH_CONFIG_DIR/aliases.zsh"
+source "$ZSH_CONFIG_DIR/bindings.zsh"
+source "$ZSH_CONFIG_DIR/integrations/eza.zsh"
+source "$ZSH_CONFIG_DIR/integrations/git.zsh"
+source "$ZSH_CONFIG_DIR/integrations/fzf.zsh"
+source "$ZSH_CONFIG_DIR/integrations/yazi.zsh"
+source "$ZSH_CONFIG_DIR/integrations/zoxide.zsh"
+source "$ZSH_CONFIG_DIR/integrations/tmux.zsh"
+source "$ZSH_CONFIG_DIR/integrations/ripgrep.zsh"
+source "$ZSH_CONFIG_DIR/integrations/pyenv.zsh"
+
+# auto launch `default` tmux session 
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
