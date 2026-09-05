@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")" || exit 1
+source ./minsh-rofi-util
+
+MENU="  Icon |󰞅  Emoji |  Font "
+
+CHOICE=$(generate_menu "$MENU" "Pick")
+
+case "$CHOICE" in
+"󰞅  Emoji ") ./minsh-rofi-picker-emoji ;;
+"  Font ") ./minsh-rofi-picker-font ;;
+"  Icon ") ./minsh-rofi-picker-icon ;;
+esac

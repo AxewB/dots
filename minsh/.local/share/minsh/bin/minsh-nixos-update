@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")" || exit 1
+./minsh-splash-text
+
+UPDATE_FLAKE="$HOME/.config/nixos#default"
+
+# TODO: add flake selector
+echo
+echo "󰚰  System will be updated using flake: $UPDATE_FLAKE"
+echo
+
+gum input --password --placeholder 'sudo password:' | sudo -S nixos-rebuild switch --flake "$UPDATE_FLAKE"
+
+echo
+echo "Done. Press any key to exit."
+read -rn1

@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd "$(dirname "$0")" || exit 1
+./minsh-splash-text
+
+GARBAGE_COMMAND=""
+NOTIFY_TEXT=""
+
+CHOICE=$(
+  gum choose \
+    --header "What to do with generations?" \
+    "Show all generations" \
+    "Clear older than 7 days" \
+    "Clear older than 1 day" \
+    "Clear all, leave current"
+)
+
+run_command() { :; }
+NEEDS_SUDO=false
+NOTIFY_TEXT=""
+
+case "$CHOICE" in
+"Show all generations")
+  run_command() { nixos-rebuild list-generations | gum pager; }
+  ;;
+
+"Clear older than 7 days")
+  run_command() { nix-collect-garbage --delete-older-than 7d; }
+  NEEDS_SUDO=true
+  NOTIFY_TEXT="Will be removed all generations OLDER than 7 days"
+  ;;
+
+"Clear older than 1 day")
+  run_command() { nix-collect-garbage --delete-older-than 1d; }
+  NEEDS_SUDO=true
+  NOTIFY_TEXT="Will be removed all generations OLDER than 1 day"
+  ;;
+
+"Clear all, leave current")
+  run_command() { nix-collect-garbage -d; }
+  NEEDS_SUDO=true
+  NOTIFY_TEXT="Will be removed ALL generations except current"
+  ;;
+
+*)
+  echo "Wrong value"
+  exit 1
+  ;;
+esac
+
+if [[ -n "$NOTIFY_TEXT" ]]; then
+  if ! gum confirm "$NOTIFY_TEXT. Continue?"; then
+    echo "Update cancelled"
+    exit 1
+  fi
+fi
+
+if $NEEDS_SUDO; then
+  PASS=$(gum input --password --placeholder 'sudo password:')
+  echo "$PASS" | sudo -S bash -c "$(declare -f run_command); run_command"
+  echo
+  echo "Done. Press any key to exit."
+  read -rn1
+else
+  run_command
+fi

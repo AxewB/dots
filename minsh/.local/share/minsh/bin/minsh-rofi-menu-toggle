@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")" || exit 1
+source ./minsh-rofi-util
+
+MENU="VPN "
+
+CHOICE=$(generate_menu "$MENU" "Toggle")
+
+case "$CHOICE" in
+"VPN ") ./minsh-rofi-modules-vpn ;;
+esac

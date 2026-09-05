@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")" || exit 1
+source ./minsh-rofi-util
+
+MENU="  Lock|󰍃  Logout|  Reboot|  Shutdown"
+
+CHOICE=$(generate_menu "$MENU" "Power menu")
+
+case "$CHOICE" in
+"  Lock") hyprlock ;;
+"󰍃  Logout") hyprshutdown -t "Exitting hyprland..." ;;
+"  Reboot") hyprshutdown -t "Closing apps before reboot..." --post-cmd 'reboot' ;;
+"  Shutdown") hyprshutdown -t "Closing apps before shutdown..." --post-cmd 'shutdown -P 0';;
+esac

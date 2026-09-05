@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+CONFIG=(-config "$HOME/.local/share/minsh/config/rofi/config.rasi")
+THEME=(-theme "$HOME/.local/share/minsh/config/rofi/theme-menu.rasi")
+THEME_DRUN=(-theme "$HOME/.local/share/minsh/config/rofi/theme-drun.rasi")
+
+generate_menu() {
+  printf "%s\n" "$1" | rofi -dmenu -i -p "$2" -sep '|' "${CONFIG[@]}" "${THEME[@]}" -lines 3
+}
+
+generate_menu_modi() {
+  printf "%s\n" "$1" | rofi -dmenu -i -p "$2" -sep '|' "${CONFIG[@]}" "${THEME[@]}"
+}

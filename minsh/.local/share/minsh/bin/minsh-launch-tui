@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec setsid uwsm-app -- kitty --app-id="minsh.floating.$(basename "$1")" -e "$1" "${@:2}"

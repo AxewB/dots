@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+MENUS_DIR="$HOME/.local/share/minsh/config/walker/menus"
+
+launch_config() {
+  # echo "LAUNCHING walker --config " "$MENUS_DIR/$1.json"
+  walker --config "$MENUS_DIR/$1.json"
+}
+
+MENU_NAME=$1
+
+case "$MENU_NAME" in
+"toggle") launch_config toggle;;
+"controls") launch_config controls;;
+"pick") launch_config pick;;
+"help") launch_config help;;
+"system") launch_config system;;
+"power") launch_config power;;
+*) launch_config main;;
+esac
+
+# MENU="  Toggle |  Controls |  Pick |󰋗  Help |  System |  Power "
+# CHOICE=$(generate_menu "$MENU" "Menu")
+#
+# case "$CHOICE" in
+# "  Toggle ") minsh-rofi-menu-toggle ;;
+# "  Controls ") minsh-rofi-menu-controls ;;
+# "  Pick ") minsh-rofi-menu-pick ;;
+# "  System ") minsh-rofi-menu-system ;;
+# "󰋗  Help ") minsh-rofi-menu-help ;;
+# "  Power ") minsh-rofi-power-menu ;;
+# *) exit 0 ;;
+# esac

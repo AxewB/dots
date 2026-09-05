@@ -1,0 +1,9 @@
+default:
+    extension: .kvconfig
+    output: colors
+colloid:
+    extension: .kvconfig
+    output: colors
+stylix_theme:
+    extension: .kvconfig
+    output: colors

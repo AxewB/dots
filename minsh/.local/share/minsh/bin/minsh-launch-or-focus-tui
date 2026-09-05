@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+APP_ID="minsh.terminal.app.$(basename "$1")"
+LAUNCH_COMMAND=(minsh-launch-tui "$@")
+
+exec minsh-launch-or-focus "$APP_ID" "${LAUNCH_COMMAND[@]}"

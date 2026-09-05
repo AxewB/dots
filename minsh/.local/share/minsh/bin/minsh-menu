@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+
+export PATH="$HOME/.local/share/omarchy/bin:$PATH"
+
+generate_menu() {
+  local prompt="$1"
+  local items="$1"
+  printf "%s" "$items" | walker --dmenu --placeholder "$prompt"
+}
+
+# show_toggle_menu() {
+#   local items=(
+#     "  Toggle "
+#     "  Controls "
+#   )
+#
+#   local choice
+#   choice=$(generate_menu "Menu" "${items[@]}")
+#
+#   case $choice in
+#   *Toggle*) minsh-rofi-menu-toggle ;;
+#   *Controls*) minsh-rofi-menu-controls ;;
+#   *) exit 0 ;;
+#   esac
+# }
+
+show_main_menu() {
+  local items=(
+    "  Toggle "
+    "  Controls "
+    "  Pick "
+    "󰋗  Help "
+    "  System "
+    "  Power "
+  )
+
+  local choice
+  choice=$(generate_menu "Menu" "${items[@]}")
+
+  case $choice in
+  *Toggle*) minsh-rofi-menu-toggle ;;
+  *Controls*) minsh-rofi-menu-controls ;;
+  *Pick*) minsh-rofi-menu-pick ;;
+  *System*) minsh-rofi-menu-system ;;
+  *Help*) minsh-rofi-menu-help ;;
+  *Power*) minsh-rofi-power-menu ;;
+  *) exit 0 ;;
+  esac
+}
+
+show_toggle_menu() {
+  local items=(
+    "󰖂  VPN "
+  )
+
+  local choice
+  choice=$(generate_menu "Menu" "${items[@]}")
+
+  case $choice in
+  *VPN*) minsh-rofi-modules-vpn ;;
+  *) exit 0 ;;
+  esac
+}
+show_controls_menu() { true; }
+show_pick_menu() { true; }
+show_help_menu() { true; }
+show_power_menu() { true; }
+
+show_main_menu

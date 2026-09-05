@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+cleanup() {
+  tput cnorm
+  tput sgr0
+  # tput cup 0 0
+}
+trap cleanup EXIT INT TERM
+
+# Скрываем курсор и очищаем экран
+tput civis
+clear
+
+# ASCII-арт (без lolcat, т.к. gum style сам раскрашивает)
+SPLASH=$(
+  cat <<'EOF'
+░█▄█░▀█▀░█▀█░█▀▀░█░█
+░█░█░░█░░█░█░▀▀█░█▀█
+░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░▀
+EOF
+)
+
+gum style \
+  --foreground 208 \
+  --border "rounded" \
+  --border-foreground 208 \
+  --margin "1 1" \
+  --padding "1 4" \
+  "$SPLASH"

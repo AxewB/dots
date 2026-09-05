@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")" || exit 1
+source ./minsh-rofi-util
+
+MENU="Bindings"
+
+CHOICE=$(generate_menu "$MENU" "Select")
+
+case "$CHOICE" in
+"Bindings") ./minsh-rofi-hyprland-bindings ;;
+esac

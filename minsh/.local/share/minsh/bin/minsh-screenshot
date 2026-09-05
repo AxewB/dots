@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
+FILENAME="$(date +"%Y-%m-%d-%H%M%S")-screenshot.png"
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+  -m | --mode)
+    MODE=$2
+    shift 2
+    ;;
+  -e | --edit)
+    EDIT=true
+    shift
+    ;;
+  *)
+    echo "Неизвестный аргумент: $1"
+    ;;
+  esac
+done
+
+open_satty_to_edit() {
+  if [ -z "$EDIT" ]; then
+    exit 0
+  fi
+  satty --filename "$SCREENSHOT_DIR/$FILENAME"
+}
+
+if [ -z "$MODE" ]; then
+  read -r -p "Mode required (screen, window, region, active_window, active_screen)" MODE
+  exit 1
+fi
+
+case $MODE in
+screen) hyprshot --freeze --mode output --filename "$FILENAME" --output-folder "$SCREENSHOT_DIR";;
+window) hyprshot --freeze --mode window --filename "$FILENAME" --output-folder "$SCREENSHOT_DIR";;
+region) hyprshot --freeze --mode region --filename "$FILENAME" --output-folder "$SCREENSHOT_DIR";;
+active_window) hyprshot --freeze --mode active --mode window --filename "$FILENAME" --output-folder "$SCREENSHOT_DIR";;
+active_screen) hyprshot --freeze --mode active --mode output --filename "$FILENAME" --output-folder "$SCREENSHOT_DIR";;
+*) echo "Wrong mode $MODE" ;;
+esac
+
+[ "$EDIT" = "true" ] && satty --filename "$SCREENSHOT_DIR/$FILENAME"

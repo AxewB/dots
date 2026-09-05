@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DATA_DIR="$HOME/.local/share/minsh/config/flavours/data"
+CONFIG_FILE="$HOME/.local/share/minsh/config/flavours/config.toml"
+THEME=$1
+
+flavours -d "$DATA_DIR" -c "$CONFIG_FILE" apply "$THEME"
+

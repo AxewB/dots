@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")" || exit 1
+source ./minsh-rofi-util
+
+MENU="  Toggle |  Controls |  Pick |󰋗  Help |  System |  Power "
+CHOICE=$(generate_menu "$MENU" "Menu")
+
+case "$CHOICE" in
+"  Toggle ") minsh-rofi-menu-toggle ;;
+"  Controls ") minsh-rofi-menu-controls ;;
+"  Pick ") minsh-rofi-menu-pick ;;
+"  System ") minsh-rofi-menu-system ;;
+"󰋗  Help ") minsh-rofi-menu-help ;;
+"  Power ") minsh-rofi-power-menu ;;
+*) exit 0 ;;
+esac

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")" || exit 1
+source ./minsh-rofi-util
+
+MENU="  Bluetooth |  Network |  Sound |  Resource monitor "
+
+CHOICE=$(generate_menu "$MENU" "Controls")
+
+case "$CHOICE" in
+"  Bluetooth ") ./minsh-launch-tui bluetui ;;
+"  Network ") ./minsh-launch-tui nmtui ;;
+"  Sound ") ./minsh-launch-tui wiremix ;;
+"  Resource monitor ") ./minsh-launch-tui-small-font btop ;;
+esac

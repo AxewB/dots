@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+set -E
+set -e
+set -u
+set -o pipefail
+
+cd "$(dirname "$0")"
+source ./minsh-rofi-util
+
+declare FONT_LIST=""
+declare PICKED_ENTRY=""
+
+get_font_list() {
+  font_list=$(fc-list --format="%{family[0]}\n" | sort | uniq)
+
+  if [[ $font_list ]]; then
+    FONT_LIST=$font_list
+    return 0
+  fi
+  return 1
+}
+
+generate_rofi_menu() {
+  local pick=$(echo -e "$FONT_LIST" | rofi -dmenu -p "Pick font" "${CONFIG[@]}" "${THEME[@]}")
+
+  PICKED_ENTRY="${pick}"
+}
+
+copy_font_family() {
+  if [[ -n "$PICKED_ENTRY" ]]; then
+    wl-copy "$PICKED_ENTRY"
+  fi
+}
+
+main() {
+  get_font_list 
+  generate_rofi_menu
+  copy_font_family 
+
+  exit 0
+}
+
+main

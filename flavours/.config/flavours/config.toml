@@ -1,0 +1,147 @@
+shell = "zsh -c '{}'"
+
+[[items]] # kitty
+file = "~/.config/kitty/themes/flavours.conf"
+template = "kitty"
+subtemplate = "default-256"                                              # later switch to `default-256`
+rewrite = true
+hook = "kitty @ set-colors --all '~/.config/kitty/themes/flavours.conf'"
+
+[[items]] # foot
+file = "~/.config/foot/foot.ini"
+template = "foot"
+rewrite = false
+start = "# start flavours"
+end = "# end flavours"
+
+[[items]] # neovim
+file = "~/.config/nvim/lua/themes/flavours.lua"
+template = "neovim"
+rewrite = true
+
+[[items]] # zathura
+file = "~/.config/zathura/zathurarc"
+template = "zathura"
+rewrite = false
+start = "# start flavours"
+end = "# end flavours"
+
+[[items]] # fzf
+file = "~/.config/zsh/integrations/fzf.zsh"
+template = "fzf"
+subtemplate = "base16-default"
+rewrite = false
+start = "# start flavours"
+end = "# end flavours"
+
+[[items]] # quickshell minsh
+file = "~/.cache/quickshell/minsh/colorscheme.json"
+template = "styles"
+subtemplate = "json"
+rewrite = true
+
+[[items]] # btop
+file = "~/.config/btop/themes/flavours.theme"
+template = "btop"
+rewrite = true
+
+[[items]] # mako
+file = "~/.config/mako/theme"
+template = "mako"
+rewrite = true
+hook = "makoctl reload"
+
+[[items]] # hyprland
+file = "~/.config/hypr/hyprcolors.conf"
+template = "hyprland"
+rewrite = true
+
+[[items]] # yazi
+file = "~/.config/yazi/theme.toml"
+template = "yazi"
+rewrite = true
+
+[[items]] # bat
+file = "~/.config/bat/themes/flavours.tmTheme"
+template = "textmate"
+rewrite = true
+hook = "bat cache --build"
+
+[[items]] # pywal
+file = "~/.cache/wal/colors.json"
+template = "pywal"
+rewrite = true
+hook = "pywalfox update"
+
+# [[items]] # kvantum
+# file = "~/.config/Kvantum/flavours/flavours.kvconfig"
+# template = "Kvantum"
+# subtemplate = "stylix_theme"
+# rewrite = true
+# hook = "kvantummanager --set flavours"
+
+# [[items]] # kvantum svg
+# file = "~/.config/Kvantum/flavours/flavours.svg"
+# template = "Kvantum"
+# subtemplate = "stylix_theme_svg"
+# rewrite = true
+
+[[items]] # tmux
+file = "~/.config/tmux/tmux.conf"
+template = "tmux"
+subtemplate = "base16"
+rewrite = false
+start = "# start flavours"
+end = "# end flavours"
+
+
+[[items]] # zellij
+file = "~/.config/zellij/themes/flavours.kdl"
+template = "zellij"
+subtemplate = "default"
+rewrite = true
+
+[[items]] # cava
+file = "~/.config/cava/cava.ini"
+template = "cava"
+rewrite = true
+
+[[items]] # vimiv
+file = "~/.config/vimiv/styles/flavours"
+template = "vimiv"
+rewrite = true
+
+[[items]] # gtk
+file = "~/.config/gtk/colors.css"
+template = "gtk"
+rewrite = true
+
+[[items]] # gtk 3
+file = "~/.config/gtk-3.0/colors.css"
+template = "gtk"
+rewrite = true
+hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark'
+
+[[items]] # gtk 4
+file = "~/.config/gtk-4.0/colors.css"
+template = "gtk"
+rewrite = true
+
+[[items]] # wlr-which-key
+file = "~/.config/wlr-which-key/config.yaml"
+template = "wlr-which-key"
+rewrite = false
+start = "# start flavours"
+end = "# end flavours"
+
+[[items]] # helix
+file = "~/.config/helix/themes/flavours.toml"
+template = "helix"
+rewrite = true
+
+# godot
+# gtk-flatcolor
+# gtk2
+# spotify
+# vim
+# vscode

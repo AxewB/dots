@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -E
+set -e
+set -u
+set -o pipefail
+
+cd "$(dirname "$0")"
+source ./minsh-rofi-util
+
+rofi -modi nerdy -show nerdy "${CONFIG[@]}" "${THEME[@]}"

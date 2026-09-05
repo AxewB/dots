@@ -1,0 +1,40 @@
+# default statusbar colors
+set-option -g status-style "fg=#{{base05-hex}},bg=#{{base01-hex}}"
+
+# default window title colors
+set-window-option -g window-status-style "fg=#{{base05-hex}},bg=#{{base01-hex}}"
+
+# active window title colors
+set-window-option -g window-status-current-style "fg=#{{base0A-hex}},bg=#{{base01-hex}}"
+
+# pane border
+set-option -g pane-border-style "fg=#{{base02-hex}}"
+set-option -g pane-active-border-style "fg=#{{base02-hex}}"
+
+# message text
+set-option -g message-style "fg=#{{base06-hex}},bg=#{{base01-hex}}"
+
+# pane number display
+set-option -g display-panes-active-colour "#{{base04-hex}}"
+set-option -g display-panes-colour "#{{base00-hex}}"
+
+# clock
+set-window-option -g clock-mode-colour "#{{base07-hex}}"
+
+# copy mode highlight
+set-window-option -g mode-style "fg=#{{base04-hex}},bg=#{{base01-hex}}"
+
+# bell
+set-window-option -g window-status-bell-style "fg=#{{base00-hex}},bg=#{{base08-hex}}"
+
+# style for window titles with activity
+set-window-option -g window-status-activity-style "fg=#{{base05-hex}},bg=#{{base00-hex}}"
+
+# style for command messages
+set-option -g message-command-style "fg=#{{base06-hex}},bg=#{{base01-hex}}"
+
+set -g status-left   "#[fg=#{{base07-hex}}]  #S #[fg=#{{base02-hex}},bg=#{{base01-hex}}] #(echo '#{pane_current_path}' | awk -F '/' '{if(NF > 4){print \"/…/\"$(NF-2)\"/\"$(NF-1)\"/\"$(NF)}else{print}}' < /dev/stdin)"
+set -g status-right  "#[fg=#{{base03-hex}},bg=#{{base01-hex}}]%d %b  #[fg=#{{base07-hex}}]%H:%M %a  "
+
+set -g window-status-format      '#[fg=#{{base03-hex}}]#W #{?window_zoomed_flag,󰖯,}'
+set -g window-status-current-format '#[fg=#{{base07-hex}}]#W #{?window_zoomed_flag,󰖯,}'

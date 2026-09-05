@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")" || exit 1
+source ./minsh-rofi-util
+
+HYPR_CONF="$HOME/.config/hypr/bindings.conf"
+BINDINGS=""
+
+rg "bind" "$HYPR_CONF"
+
+get_bindings() {
+  BINDINGS=$(rg "bind" "$HYPR_CONF")
+  echo "$BINDINGS"
+}
+
+main() {
+  get_bindings
+  generate_menu "${BINDINGS[@]}" "Bindings"
+}
+
+# mapfile -t BINDINGS < <(
+#   grep -E '^[[:space:]]*bindd[[:space:]]*=' "$HYPR_CONF" |
+#   sed 's/^[[:space:]]*bindd[[:space:]]*=[[:space:]]*//' |
+#   awk -F', *' '{
+#     printf "%s + %s\t%s\n", $1, $2, $3
+#   }'
+# )
+
+# CHOICE=$(generate_menu "${BINDINGS[@]}" "Bindings")
+
+# CMD=$(echo "$CHOICE" | sed -n 's/.*<span color='\''gray'\''>\(.*\)<\/span>.*/\1/p')
+#
+# # execute it if first word is exec else use hyprctl dispatch
+# if [[ $CMD == exec* ]]; then
+#     eval "$CMD"
+# else
+#     hyprctl dispatch "$CMD"
+# fi
+
+main
