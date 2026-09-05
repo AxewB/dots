@@ -1,0 +1,13 @@
+name = "minsh-menu-system"
+name_pretty = "Minsh system actions"
+# icon = "applications-other"
+
+[[entries]]
+text = "󰚰  Update"
+keywords = ['update']
+actions = { "update" = "minsh-launch-tui minsh-nixos-update" }
+
+[[entries]]
+text = "󰩹  NixOS generations"
+keywords = ['generations']
+actions = { "generations" = "minsh-launch-tui minsh-system-nixos-generations" }

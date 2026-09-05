@@ -1,0 +1,23 @@
+name = "minsh-menu-controls"
+name_pretty = "Minsh controls menu"
+# icon = "applications-other"
+
+[[entries]]
+text = "  Bluetooth "
+keywords = ['bluetooth']
+actions = { "open_bluetooth_tui" = "minsh-launch-tui bluetui" }
+
+[[entries]]
+text = "  Network "
+keywords = ['network', 'wifi']
+actions = { "open_network_tui" = "minsh-launch-tui nmtui" }
+
+[[entries]]
+text = "  Sound "
+keywords = ['sound', 'volume']
+actions = { "open_sound_tui" = "minsh-launch-tui wiremix" }
+
+[[entries]]
+text = "  Resource monitor "
+keywords = ['resource', 'monitor', 'btop']
+actions = { "open_resource_tui" = "minsh-launch-tui-small-font btop" }

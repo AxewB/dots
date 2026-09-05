@@ -1,0 +1,148 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        // Global bindings
+        "bindings": {
+            // removing keymap to for closing app
+            "ctrl-q": null,
+            "ctrl-shift-w": null,
+
+            "shift-;": "command_palette::Toggle"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-h": "workspace::ActivatePaneLeft",
+            "ctrl-j": "workspace::ActivatePaneDown",
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "ctrl-l": "workspace::ActivatePaneRight",
+
+            "ctrl-shift-h": "pane::ActivatePreviousItem",
+            "ctrl-shift-l": "pane::ActivateNextItem",
+
+            // "ctrl-t": "workspace::ToggleRightDock", // "terminal_panel::ToggleFocus"
+            "ctrl-t": "workspace::ToggleBottomDock", // "terminal_panel::ToggleFocus"
+            "ctrl-shift-t": "workspace::NewTerminal" // "terminal_panel::ToggleFocus"
+        }
+    },
+    {
+        "context": "GitPanel",
+        "bindings": {
+            // explorer
+            "ctrl-shift-g": "workspace::ToggleLeftDock"
+        }
+    },
+    {
+        "context": "ProjectPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || not_editing",
+        "bindings": {
+            "ctrl-h": "workspace::ActivatePaneLeft",
+            "ctrl-j": "workspace::ActivatePaneDown",
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "ctrl-l": "workspace::ActivatePaneRight",
+
+            // telescope
+            "space f f": "file_finder::Toggle",
+            "space f g": "pane::DeploySearch",
+
+            // explorer
+            "space e": "workspace::ToggleLeftDock",
+
+            // file actions
+            // "space w": [
+            //   "workspace::SendKeystrokes",
+            //   ": w enter : format enter : w enter"
+            // ],
+            "space w": "workspace::Save",
+            // "shift-q": "pane::CloseActiveItem",
+            "space q": "pane::CloseActiveItem",
+            "shift-q": "pane::CloseActiveItem", // additional keymap (used when i want switch tabs and close active item)
+
+            // moving between buffers
+            "shift-h": "pane::ActivatePreviousItem",
+            "shift-l": "pane::ActivateNextItem",
+
+            // terminal
+            "ctrl-t": "terminal_panel::ToggleFocus",
+            "ctrl-shift-T": "workspace::NewTerminal"
+        }
+    },
+    {
+        "context": "project_panel",
+        "bindings": {
+            "space e": "workspace::ToggleLeftDock"
+        }
+    },
+    {
+        "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+        "bindings": {
+            // Tab things. Almost as good as harpoon.
+            "space h A": "pane::TogglePinTab",
+            "space h a": ["pane::ActivateItem", 0],
+            "space h s": ["pane::ActivateItem", 1],
+            "space h d": ["pane::ActivateItem", 2],
+            "space h f": ["pane::ActivateItem", 3],
+
+            "space b d": "pane::CloseActiveItem",
+
+            // Telescope
+            // "space f f": "file_finder::Toggle",
+            // "space f g": "pane::DeploySearch",
+
+            // Project tree
+            "space e": "project_panel::ToggleFocus",
+
+            // "space e": "git_panel::ToggleFocus",
+            "tab": "panel::NextPanelTab",
+            // "shift-tab": "workspace::ActivatePreviousPane",
+
+            "space s h ": "pane::SplitHorizontal",
+            "space s v": "pane::SplitVertical",
+
+            // LSP
+            "g i": "editor::GoToImplementation",
+            "g I": "editor::GoToImplementationSplit",
+            "g d": "editor::GoToDefinition",
+            "g D": "editor::GoToTypeDefinition",
+            "g r": "editor::FindAllReferences",
+            "g R": "editor::Rename",
+            "shift-k": "editor::Hover",
+            // "alt-tab": "editor::AcceptEditPrediction", // accept
+            // "alt-l": null, // removing alt-l completion
+
+            // "shift-o": "pane::ActivateNextItem",
+
+            "space c a": "editor::ToggleCodeActions",
+
+            // formatting
+            "space F": "editor::Format",
+            "space f i": "editor::OrganizeImports",
+
+            // File actions
+            // "space w": "workspace::Save",
+            // "shift-q": "editor::Format",
+
+            // navigation and tab actions
+            // "ctrl-h": "workspace::ActivatePaneLeft",
+            // "ctrl-j": "workspace::ActivatePaneDown",
+            // "ctrl-k": "workspace::ActivatePaneUp",
+            // "ctrl-l": "workspace::ActivatePaneRight",
+            // "space q": "pane::CloseActiveItem",
+
+            "ctrl-K": "pane::SplitUp",
+            "ctrl-J": "pane::SplitDown",
+            "ctrl-H": "pane::SplitLeft",
+            "ctrl-L": "pane::SplitRight",
+
+            // REPL
+            "shift-F5": "repl::Run"
+            // "shift-F6": "repl::ClearOutputs"
+        }
+    }
+]

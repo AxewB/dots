@@ -1,0 +1,39 @@
+set selection-clipboard clipboard
+# set font "Fira Sans 12"
+
+# start flavours
+set default-bg                  "#262427"
+set default-fg                  "#514f52"
+
+set statusbar-fg                "#7c7b7d"
+set statusbar-bg                "#676567"
+
+set inputbar-bg                 "#3b393c"
+set inputbar-fg                 "#fcfcfc"
+
+set notification-bg             "#3b393c"
+set notification-fg             "#fcfcfc"
+
+set notification-error-bg       "#3b393c"
+set notification-error-fg       "#ff7272"
+
+set notification-warning-bg     "#3b393c"
+set notification-warning-fg     "#ff7272"
+
+set highlight-color             "#ffca58"
+set highlight-active-color      "#49cae4"
+
+set completion-bg               "#514f52"
+set completion-fg               "#49cae4"
+
+set completion-highlight-fg     "#fcfcfc"
+set completion-highlight-bg     "#49cae4"
+
+set recolor-lightcolor          "#3b393c"
+set recolor-darkcolor           "#eae9eb"
+
+set recolor                     "false"
+set recolor-keephue             "false"
+# end flavours
+
+set recolor true

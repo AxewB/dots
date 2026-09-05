@@ -1,0 +1,23 @@
+name = "minsh-menu-power"
+name_pretty = "Minsh power menu"
+# icon = "applications-other"
+
+[[entries]]
+text = "  Lock"
+keywords = ['lock']
+actions = { "lock" = "hyprlock" }
+
+[[entries]]
+text = "󰍃  Logout"
+keywords = ['logout']
+actions = { "logout" = "hyprshutdown -t \"Exitting hyprland...\"" }
+
+[[entries]]
+text = "  Reboot"
+keywords = ['reboot']
+actions = { "reboot" = "hyprshutdown -t \"Closing apps before reboot...\" --post-cmd 'reboot'" }
+
+[[entries]]
+text = "  Shutdown"
+keywords = ['shutdown']
+actions = { "shutdown" = "hyprshutdown -t \"Closing apps before shutdown...\" --post-cmd 'shutdown -P 0'" }

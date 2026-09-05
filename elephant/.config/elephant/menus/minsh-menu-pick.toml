@@ -1,0 +1,23 @@
+name = "minsh-menu-pick"
+name_pretty = "Minsh picker menu"
+# icon = "applications-other"
+
+[[entries]]
+text = "󰞅  Emoji "
+keywords = ['emoji']
+actions = { "emoji picker" = "walker -m symbols" }
+
+[[entries]]
+text = "  Font "
+keywords = ['font']
+submenu = "fonts"
+
+[[entries]]
+text = "  Icon "
+keywords = ['icon']
+actions = { 'nerdfont' = 'elephant m minsh-module-nerdfont' }
+
+[[entries]]
+text = "󰹑  Screenshot "
+keywords = ['screenshot', 'prscr']
+submenu = 'minsh-module-screenshot'

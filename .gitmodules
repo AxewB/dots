@@ -1,0 +1,3 @@
+[submodule "quickshell/.config/quickshell/minsh"]
+	path = quickshell/.config/quickshell/minsh
+	url = git@github.com:AxewB/qshell.git

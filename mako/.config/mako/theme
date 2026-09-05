@@ -1,0 +1,14 @@
+# generated with flavours
+background-color=#262427
+text-color=#fcfcfc
+border-color=#49cae4
+
+[urgency=low]
+background-color=#262427
+text-color=#ffca58
+border-color=#49cae4
+
+[urgency=high]
+background-color=#262427
+text-color=#ff7272
+border-color=#49cae4

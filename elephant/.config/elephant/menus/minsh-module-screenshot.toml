@@ -1,0 +1,28 @@
+name = "minsh-module-screenshot"
+name_pretty = "Minsh screenshot menu"
+# icon = "applications-other"
+
+[[entries]]
+text = "Screen"
+keywords = ['screen']
+actions = { 'screen' = 'minsh-screenshot -m screen' }
+
+[[entries]]
+text = "Window"
+keywords = ['window']
+actions = { 'window' = 'minsh-screenshot -m window' }
+
+[[entries]]
+text = "Region"
+keywords = ['region']
+actions = { 'region' = 'minsh-screenshot -m region' }
+
+[[entries]]
+text = "Active window"
+keywords = ['active_window']
+actions = { 'active_window' = 'minsh-screenshot -m active_window' }
+
+[[entries]]
+text = "Active screen"
+keywords = ['active_screen']
+actions = { 'active_screen' = 'minsh-screenshot -m active_screen' }

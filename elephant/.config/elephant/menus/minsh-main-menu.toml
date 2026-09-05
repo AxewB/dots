@@ -1,0 +1,40 @@
+name = "minsh-main-menu"
+name_pretty = "Minsh main menu"
+# icon = "applications-other"
+
+[[entries]]
+text = "  Toggle "
+keywords = ['toggle']
+submenu = 'minsh-menu-toggle'
+
+[[entries]]
+text = "  Controls "
+keywords = ['controls']
+submenu = 'minsh-menu-controls'
+
+[[entries]]
+text = "  Pick "
+keywords = ['pick']
+submenu = 'minsh-menu-pick'
+
+[[entries]]
+text = "  Actions "
+keywords = ['actions']
+submenu = 'minsh-menu-actions'
+
+[[entries]]
+text = "󰋗  Help "
+keywords = ['help']
+submenu = 'minsh-menu-help'
+
+# [[entries]]
+# text = "  NixOS "
+# keywords = ['system']
+# submenu = 'minsh-menu-system'
+
+[[entries]]
+text = "  Power "
+keywords = ['power']
+submenu = 'minsh-menu-power'
+
+

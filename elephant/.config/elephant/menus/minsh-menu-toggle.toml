@@ -1,0 +1,8 @@
+name = "minsh-menu-toggle"
+name_pretty = "Minsh toggles menu"
+# icon = "applications-other"
+
+[[entries]]
+text = "󰖂  VPN "
+keywords = ['vpn']
+submenu = "minsh-module-switch_vpn"

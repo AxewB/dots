@@ -1,0 +1,11 @@
+name = "minsh-menu-actions"
+name_pretty = "Minsh actions menu"
+# icon = "applications-other"
+
+[[entries]]
+text = "󰹑  Restart walker/elephant "
+keywords = ['walker', 'elephant', 'restart']
+actions = {
+  'elephant' = 'systemctl --user restart elephant',
+  'walker' = 'systemctl --user restart walker'
+}

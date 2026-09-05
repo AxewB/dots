@@ -1,0 +1,86 @@
+/* 0x96f — a ZenNotes theme.
+ *
+ * Only this file's CSS is active while the theme is selected, so :root is safe
+ * to use unscoped. Put dark-mode overrides under [data-theme-mode="dark"].
+ * Tokens are space-separated RGB triplets, e.g. --z-bg: 255 255 255;
+ *
+ * Ship fonts/images beside this file and reference them theme-relative, e.g.
+ *   @font-face { font-family: "My Font";
+ *     src: url(zen-theme://0x96f/my-font.woff2) format("woff2"); }
+ */
+
+:root {
+  color-scheme: light;
+
+  --z-bg: 252 252 250;
+  --z-bg-softer: 247 247 245;
+  --z-bg-1: 239 239 237;
+  --z-bg-2: 226 226 224;
+  --z-bg-3: 207 207 205;
+  --z-bg-4: 166 166 164;
+
+  --z-fg: 38 36 39;
+  --z-fg-1: 30 28 31;
+  --z-fg-2: 91 88 91;
+
+  --z-grey-2: 91 88 91;
+  --z-grey-1: 119 116 119;
+  --z-grey-0: 148 145 148;
+  --z-grey-dim: 181 178 181;
+
+  --z-accent: 252 252 250;
+  --z-accent-soft: 252 252 250;
+  --z-accent-muted: 252 252 250;
+
+  --z-red: 214 82 82;
+  --z-green: 105 135 42;
+  --z-yellow: 183 126 31;
+  --z-blue: 49 139 160;
+  --z-purple: 119 103 177;
+  --z-aqua: 66 139 158;
+
+  --z-shadow: 38 36 39;
+
+  --z-glass-a1: 0.72;
+  --z-glass-a2: 0.56;
+  --z-glass-a3: 0.38;
+  --z-glass-a4: 0.25;
+}
+
+[data-theme-mode="dark"] {
+  color-scheme: dark;
+
+  --z-bg: 38 36 39;
+  --z-bg-softer: 43 41 44;
+  --z-bg-1: 48 46 49;
+  --z-bg-2: 60 58 61;
+  --z-bg-3: 84 82 82;
+  --z-bg-4: 112 110 108;
+
+  --z-fg: 252 252 250;
+  --z-fg-1: 252 252 250;
+  --z-fg-2: 174 172 173;
+
+  --z-grey-2: 174 172 173;
+  --z-grey-1: 145 143 144;
+  --z-grey-0: 116 114 116;
+  --z-grey-dim: 84 82 84;
+
+  --z-accent: 255 189 62;
+  --z-accent-soft: 255 213 136;
+  --z-accent-muted: 204 152 53;
+
+  --z-red: 255 114 114;
+  --z-green: 188 223 89;
+  --z-yellow: 255 202 88;
+  --z-blue: 73 202 228;
+  --z-purple: 160 147 226;
+  --z-aqua: 174 232 244;
+
+  --z-shadow: 0 0 0;
+
+  --z-glass-a1: 0.58;
+  --z-glass-a2: 0.46;
+  --z-glass-a3: 0.32;
+  --z-glass-a4: 0.22;
+  }

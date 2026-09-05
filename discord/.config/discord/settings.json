@@ -1,0 +1,18 @@
+{
+  "offloadAdmControls": true,
+  "BACKGROUND_COLOR": "#000000",
+  "enableHardwareAcceleration": true,
+  "chromiumSwitches": {},
+  "asyncVideoInputDeviceInit": false,
+  "IS_MAXIMIZED": false,
+  "IS_MINIMIZED": false,
+  "WINDOW_BOUNDS": {
+    "x": 920,
+    "y": 34,
+    "width": 991,
+    "height": 1037
+  },
+  "SKIP_HOST_UPDATE": true,
+  "openH264Enabled": true,
+  "DESKTOP_TTI_EARLY_UPDATE_CHECK": true
+}

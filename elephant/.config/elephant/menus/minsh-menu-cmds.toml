@@ -1,0 +1,56 @@
+name = "minsh-menu-cmds"
+name_pretty = "Minsh commands menu"
+# icon = "applications-other"
+
+### 
+# SCREENSHOT
+### 
+
+[[entries]]
+text = "Screenshot: screen"
+keywords = ['screenshot', 'screen']
+actions = { 'screen' = 'minsh-screenshot -m screen' }
+
+[[entries]]
+text = "Screenshot: window"
+keywords = ['screenshot', 'window']
+actions = { 'window' = 'minsh-screenshot -m window' }
+
+[[entries]]
+text = "Screenshot: region"
+keywords = ['screenshot', 'region']
+actions = { 'region' = 'minsh-screenshot -m region' }
+
+[[entries]]
+text = "Screenshot: active window"
+keywords = ['screenshot', 'active_window']
+actions = { 'active_window' = 'minsh-screenshot -m active_window' }
+
+[[entries]]
+text = "Screenshot: active screen"
+keywords = ['screenshot', 'active_screen']
+actions = { 'active_screen' = 'minsh-screenshot -m active_screen' }
+
+### 
+# POWER
+### 
+
+[[entries]]
+text = "Power: Lock"
+keywords = ["power", 'lock']
+actions = { "lock" = "hyprlock" }
+
+[[entries]]
+text = "Power: Logout"
+keywords = ["power", 'logout']
+actions = { "logout" = "hyprshutdown -t \"Exitting hyprland...\"" }
+
+[[entries]]
+text = "Power: Reboot"
+keywords = ["power", 'reboot']
+actions = { "reboot" = "hyprshutdown -t \"Closing apps before reboot...\" --post-cmd 'reboot'" }
+
+[[entries]]
+text = "Power: Shutdown"
+keywords = ["power", 'shutdown']
+actions = { "shutdown" = "hyprshutdown -t \"Closing apps before shutdown...\" --post-cmd 'shutdown -P 0'" }

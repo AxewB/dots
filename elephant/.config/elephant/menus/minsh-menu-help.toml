@@ -1,0 +1,8 @@
+name = "minsh-menu-help"
+name_pretty = "Minsh help menu"
+# icon = "applications-other"
+
+[[entries]]
+text = "󰘳  Bindings"
+keywords = ['bindings', 'bind', 'hyprland']
+submenu = "minsh-module-hyprland_bindings"

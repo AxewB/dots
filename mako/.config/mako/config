@@ -1,0 +1,19 @@
+font=CaskaydiaCove Nerd Font 12
+background-color=#333333DD
+text-color=#FFFFFF
+border-color=#555555FF
+border-size=2
+border-radius=8
+margin=12
+padding=10
+
+anchor=top-center
+
+default-timeout=5000
+max-visible=5
+group-by=app-name
+icons=1
+markup=1
+layer=overlay
+
+include=~/.config/mako/theme
