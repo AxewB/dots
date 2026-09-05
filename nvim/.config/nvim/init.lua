@@ -48,7 +48,6 @@ require("plugins.nvim-surround")
 require("plugins.img-clip")
 require("plugins.repeat")
 require("plugins.tmux")
--- require("plugins.scratch")
 
 -- require("plugins.stay-centered")
 
