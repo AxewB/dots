@@ -1,0 +1,10 @@
+{
+  "stylua-ignore-block": {
+    "prefix": "Add qmlformat ignore block",
+    "body": [
+      "// qmlformat off",
+      "${1}",
+      "// qmlformat on"
+    ]
+  }
+}

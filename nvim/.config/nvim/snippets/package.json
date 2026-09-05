@@ -1,0 +1,35 @@
+{
+  "name": "personal-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "lua",
+        "path": "./lua.json"
+      },
+      {
+        "language": "cpp",
+        "path": "./cpp.json"
+      },
+      {
+        "language": "typst",
+        "path": "./typst.json"
+      },
+      {
+        "language": "vue",
+        "path": "./vue.json"
+      },
+      {
+        "language": "qml",
+        "path": "./qml.json"
+      },
+      {
+        "language": [
+          "keymap",
+          "zmk",
+          "qmk"
+        ],
+        "path": "./zmk.json"
+      }
+    ]
+  }
+}

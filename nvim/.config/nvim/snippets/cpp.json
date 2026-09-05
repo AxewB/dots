@@ -1,0 +1,43 @@
+{
+  "cpp-header-template": {
+    "prefix": "header-template",
+    "body": [
+      "#pragma once",
+      "",
+      "${1:// includes}",
+      "",
+      "class ${2:ClassName} {",
+      "public:",
+      "  ${2:ClassName}();",
+      "  ~${2:ClassName}();",
+      "",
+      "private:",
+      "  ${3:// members}",
+      "};"
+    ]
+  },
+  "cpp-qobject-template": {
+    "prefix": "qobject-template",
+    "body": [
+      "#pragma once",
+      "",
+      "#include <QObject>",
+      "",
+      "class ${1:ClassName} : public QObject {",
+      "  Q_OBJECT",
+      "",
+      "public:",
+      "  explicit ${1:ClassName}(QObject *parent = nullptr);",
+      "",
+      "signals:",
+      "  ${2:// signals}",
+      "",
+      "public slots:",
+      "  ${3:// slots}",
+      "",
+      "private:",
+      "  ${4:// members}",
+      "};"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+require("plugins.themes.catppuccin")
+require("plugins.themes.base16")
+require("plugins.themes.tokyonight")
+require("plugins.themes.0x96f")
+require("plugins.themes.oxocarbon")
+
+-- vim.cmd.colorscheme("catppuccin-mocha")
+-- vim.cmd.colorscheme("base16-catppuccin-mocha")
+-- vim.cmd.colorscheme("tokyonight-night")
+-- vim.cmd.colorscheme("tokyonight-storm")
+-- vim.cmd.colorscheme("tokyonight-day")
+-- vim.cmd.colorscheme("tokyonight-moon")
+-- vim.cmd.colorscheme("base16-0x96f")
+-- vim.cmd.colorscheme("oxocarbon")
+
+-- vim.cmd.colorscheme("0x96f")
+require("themes.base16")

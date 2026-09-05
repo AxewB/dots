@@ -1,0 +1,33 @@
+# include ~/.config/kitty/theme.conf
+include ~/.config/kitty/themes/flavour.conf
+# font
+# font_family CaskaydiaMono Nerd Font
+font_family monospace
+bold_italic_font auto
+font_size        13.0
+
+font_family CaskaydiaMono Nerd Font
+# Window
+window_padding_width 4
+hide_window_decorations yes
+# ask only if background process is in terminal 
+confirm_os_window_close 0
+modify_font cell_height 120%
+
+# Keybindings
+map ctrl+insert copy_to_clipboard
+map shift+insert paste_from_clipboard
+
+# Allow remote access
+allow_remote_control yes
+
+# Aesthetics
+enable_audio_bell no
+
+# Minimal Tab bar styling
+tab_bar_edge        bottom
+tab_bar_style       powerline
+tab_powerline_style slanted
+tab_title_template  {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
+
+

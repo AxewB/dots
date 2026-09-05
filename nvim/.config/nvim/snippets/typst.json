@@ -1,0 +1,29 @@
+{
+  "figure-template": {
+    "figure-template": "Insert figure template",
+    "body": [
+      "#figure(",
+      "  [${1}]",
+      "  caption: [/* TODO: write fig caption */],",
+      ") <fig-${2}>"
+    ]
+  },
+  "image-template": {
+    "image-template": "Insert figure template",
+    "body": [
+      "#figure(",
+      "image(),",
+      "  caption: [/* TODO: write img caption */],",
+      ") <img-${1}>"
+    ]
+  },
+  "table-template": {
+    "table-template": "Insert figure template",
+    "body": [
+      "#figure(",
+      "  table([]),",
+      "  caption: [/* TODO: write tbl caption */],",
+      ") <tbl-${1}>"
+    ]
+  }
+}
