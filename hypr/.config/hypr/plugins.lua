@@ -1,4 +1,4 @@
-require("colors")
+local colors = require("colors")
 
 if hl.plugin.hyprbars ~= nil then
   hl.config({
@@ -7,7 +7,7 @@ if hl.plugin.hyprbars ~= nil then
         enabled = true,
 
         bar_height = 24,
-        bar_color = BASE01,
+        bar_color = colors.BASE01,
         bar_text_size = 8,
         bar_text_font = "CaskaydiaCove Nerd Font",
         bar_button_padding = 8,
@@ -15,7 +15,7 @@ if hl.plugin.hyprbars ~= nil then
         bar_part_of_window = true,
 
         col = {
-          text = BASE05,
+          text = colors.BASE05,
         },
 
         icon_on_hover = false,
@@ -26,17 +26,17 @@ if hl.plugin.hyprbars ~= nil then
   })
 
   hl.plugin.hyprbars.add_button({
-    bg_color = BASE08,
+    bg_color = colors.BASE08,
     size = 12,
     action = "hyprctl dispatch killactive",
   })
   hl.plugin.hyprbars.add_button({
-    bg_color = BASE0A,
+    bg_color = colors.BASE0A,
     size = 12,
     action = "hyprctl dispatch fullscreen 2",
   })
   hl.plugin.hyprbars.add_button({
-    bg_color = BASE0B,
+    bg_color = colors.BASE0B,
     size = 12,
     action = "hyprctl dispatch togglefloating",
   })

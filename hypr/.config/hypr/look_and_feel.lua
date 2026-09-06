@@ -1,4 +1,4 @@
-require("colors")
+local colors = require("colors")
 hl.env("XCURSOR_THEME", "rose-pine-cursor")
 hl.env("XCURSOR_SIZE", 32)
 hl.env("HYPRCURSOR_THEME", "rose-pine-hyprcursor")
@@ -31,8 +31,8 @@ hl.config({
     -- border_size = 2,
 
     col = {
-      inactive_border = BASE00,
-      active_border = BASE07,
+      inactive_border = colors.BASE00,
+      active_border = colors.BASE07,
     },
 
     resize_on_border = true,
@@ -92,7 +92,7 @@ hl.config({
   },
   misc = {
     disable_hyprland_logo = true,
-    background_color = BASE00,
+    background_color = colors.BASE00,
     animate_manual_resizes = true,
     animate_mouse_windowdragging = true,
     focus_on_activate = false,

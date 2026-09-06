@@ -8,11 +8,9 @@ rewrite = true
 hook = "kitty @ set-colors --all '~/.local/share/kitty/theme.conf'"
 
 [[items]] # foot
-file = "~/.config/foot/foot.ini"
+file = "~/.local/share/foot/theme.ini"
 template = "foot"
-rewrite = false
-start = "# start flavours"
-end = "# end flavours"
+rewrite = true
 
 [[items]] # neovim
 file = "~/.local/share/nvim/theme.lua"
@@ -48,12 +46,12 @@ rewrite = true
 hook = "makoctl reload"
 
 [[items]] # hyprland
-file = "~/.config/hypr/hyprcolors.conf"
+file = "~/.local/share/hypr/colors.lua"
 template = "hyprland"
 rewrite = true
 
 [[items]] # yazi
-file = "~/.config/yazi/theme.toml"
+file = "~/.local/share/yazi/theme.toml"
 template = "yazi"
 rewrite = true
 
@@ -120,13 +118,6 @@ hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set or
 file = "~/.config/gtk-4.0/colors.css"
 template = "gtk"
 rewrite = true
-
-[[items]] # wlr-which-key
-file = "~/.config/wlr-which-key/config.yaml"
-template = "wlr-which-key"
-rewrite = false
-start = "# start flavours"
-end = "# end flavours"
 
 [[items]] # helix
 file = "~/.config/helix/themes/flavours.toml"

@@ -7,11 +7,6 @@ require("plugins")
 require("autostart")
 require("windowrules")
 
-
 require("user")
 
-
 require("test")
-
-
-
