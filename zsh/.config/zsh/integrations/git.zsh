@@ -4,6 +4,7 @@ if command -v git >/dev/null; then
   alias gi="git init"
   alias gcl="git clone"
   alias gs="git status --short"
+  alias gS="git status"
 
   alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
   alias gdt="git difftool"
@@ -14,6 +15,7 @@ if command -v git >/dev/null; then
   alias gcm="git commit -m"
 
   alias gp="git push"
+  alias gf="git fetch"
   alias gu="git pull"
 
   alias gl='git log --all --graph --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto) %D%n%s%n"'
