@@ -1,45 +1,48 @@
 # See https://git-scm.com/docs/git-config
 
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
 [init]
-	defaultBranch = master
+  defaultBranch = master
 [pull]
-	rebase = true 			 # Rebase (instead of merge) on pull
+  rebase = true 			 # Rebase (instead of merge) on pull
 [push]
-	autoSetupRemote = true   # Automatically set upstream branch on push
+  autoSetupRemote = true   # Automatically set upstream branch on push
 [difftool "nvim_difftool"]
-cmd = nvim -c \"packadd nvim.difftool\" -c \"DiffTool $LOCAL $REMOTE\"
+  cmd = nvim -c \"packadd nvim.difftool\" -c \"DiffTool $LOCAL $REMOTE\"
 [diff]
-	algorithm = histogram    # Clearer diffs on moved/edited lines
-	colorMoved = plain       # Highlight moved blocks in diffs
-	mnemonicPrefix = true    # More intuitive refs in diff output
-tool = nvim_difftool
+  algorithm = histogram    # Clearer diffs on moved/edited lines
+  colorMoved = plain       # Highlight moved blocks in diffs
+  mnemonicPrefix = true    # More intuitive refs in diff output
+  tool = nvim_difftool
 [commit]
-	verbose = true           # Include diff comment in commit message template
+  verbose = true           # Include diff comment in commit message template
 [column]
-	ui = auto 			     # Output in columns when possible
+  ui = auto 			     # Output in columns when possible
 [branch]
-	sort = -committerdate    # Sort branches by most recent commit first
+  sort = -committerdate    # Sort branches by most recent commit first
 [tag]
-	sort = -version:refname  # Sort version numbers as you would expect
+  sort = -version:refname  # Sort version numbers as you would expect
 [rerere]
-	enabled = true           # Record and reuse conflict resolutions
-	autoupdate = true        # Apply stored conflict resolutions automatically
+  enabled = true           # Record and reuse conflict resolutions
+  autoupdate = true        # Apply stored conflict resolutions automatically
 [safe]
-	directory = /mnt/HDD/12_Projects/Qt/MediaPlayerAndSorter/
-	directory = /mnt/HDD/12_Projects/Qt/MediaPlayerAndSorter/
-	directory = /mnt/HDD/12_Projects/slint/mpns
-	directory = /mnt/HDD/12_Projects/10_personal/zmk-sofle-config
-	directory = /mnt/HDD/12_Projects/21_slint/mpns
-	directory = /mnt/HDD/12_Projects/21_slint/mpns.bak
-	directory = /mnt/HDD/12_Projects/80_university/masters_diploma
-	directory = /mnt/HDD/80_University/SemestrNo12/report
-	directory = /mnt/HDD/17_OpenScad/monoscad
-	directory = /mnt/HDD/17_OpenScad/minscad
+  directory = /mnt/HDD/12_Projects/Qt/MediaPlayerAndSorter/
+  directory = /mnt/HDD/12_Projects/Qt/MediaPlayerAndSorter/
+  directory = /mnt/HDD/12_Projects/slint/mpns
+  directory = /mnt/HDD/12_Projects/10_personal/zmk-sofle-config
+  directory = /mnt/HDD/12_Projects/21_slint/mpns
+  directory = /mnt/HDD/12_Projects/21_slint/mpns.bak
+  directory = /mnt/HDD/12_Projects/80_university/masters_diploma
+  directory = /mnt/HDD/80_University/SemestrNo12/report
+  directory = /mnt/HDD/17_OpenScad/monoscad
+  directory = /mnt/HDD/17_OpenScad/minscad
 [user]
-	name = AxewB
-	email = 15068616+AxewB@users.noreply.github.com
+  name = AxewB
+  email = 15068616+AxewB@users.noreply.github.com
+[url "https://github.com/"]
+  insteadOf = gh:
+
