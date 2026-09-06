@@ -1,7 +1,4 @@
-set selection-clipboard clipboard
-# set font "Fira Sans 12"
-
-# start flavours
+# default theme
 set default-bg                  "#262427"
 set default-fg                  "#514f52"
 
@@ -34,6 +31,8 @@ set recolor-darkcolor           "#eae9eb"
 
 set recolor                     "false"
 set recolor-keephue             "false"
-# end flavours
 
+include theme
+
+set selection-clipboard clipboard
 set recolor true

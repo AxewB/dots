@@ -1,11 +1,11 @@
 shell = "zsh -c '{}'"
 
 [[items]] # kitty
-file = "~/.config/kitty/themes/flavours.conf"
+file = "~/.local/share/kitty/theme.conf"
 template = "kitty"
 subtemplate = "default-256"                                              # later switch to `default-256`
 rewrite = true
-hook = "kitty @ set-colors --all '~/.config/kitty/themes/flavours.conf'"
+hook = "kitty @ set-colors --all '~/.local/share/kitty/theme.conf'"
 
 [[items]] # foot
 file = "~/.config/foot/foot.ini"
@@ -15,16 +15,14 @@ start = "# start flavours"
 end = "# end flavours"
 
 [[items]] # neovim
-file = "~/.config/nvim/lua/themes/flavours.lua"
+file = "~/.local/share/nvim/theme.lua"
 template = "neovim"
 rewrite = true
 
 [[items]] # zathura
-file = "~/.config/zathura/zathurarc"
+file = "~/.local/share/zathura/theme"
 template = "zathura"
-rewrite = false
-start = "# start flavours"
-end = "# end flavours"
+rewrite = true
 
 [[items]] # fzf
 file = "~/.config/zsh/integrations/fzf.zsh"
