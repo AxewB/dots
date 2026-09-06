@@ -83,12 +83,10 @@ hook = "pywalfox update"
 # rewrite = true
 
 [[items]] # tmux
-file = "~/.config/tmux/tmux.conf"
+file = "~/.local/share/tmux/theme.conf"
 template = "tmux"
 subtemplate = "base16"
-rewrite = false
-start = "# start flavours"
-end = "# end flavours"
+rewrite = true
 
 
 [[items]] # zellij
