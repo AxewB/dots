@@ -25,12 +25,10 @@ template = "zathura"
 rewrite = true
 
 [[items]] # fzf
-file = "~/.config/zsh/integrations/fzf.zsh"
+file = "~/.local/share/zsh/fzf_theme.sh"
 template = "fzf"
 subtemplate = "base16-default"
-rewrite = false
-start = "# start flavours"
-end = "# end flavours"
+rewrite = true
 
 [[items]] # quickshell minsh
 file = "~/.cache/quickshell/minsh/colorscheme.json"
