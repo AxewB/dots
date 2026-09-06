@@ -65,5 +65,4 @@ require("plugins.edit_config")
 require("plugins.move_with_fzf")
 
 -- base16 theme
--- require("themes.mini-base16")
-require("themes.base16")
+require("theme")
