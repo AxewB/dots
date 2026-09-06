@@ -1,0 +1,45 @@
+theme = "flavours"
+
+[editor]
+line-number = "relative"
+mouse = true
+scrolloff = 99
+cursorline = true
+default-yank-register = "+"
+auto-format = false
+completion-timeout = 50
+color-modes = true
+popup-border = "none"
+clipboard-provider = "wayland"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+# left = ["mode", "spinner"]
+center = []
+right = ["diagnostics", "selections", "register", "position", "position-percentage" ,"file-encoding"]
+# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "V"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "all"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "·"
