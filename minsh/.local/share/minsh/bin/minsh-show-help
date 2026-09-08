@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+HELP_DIR="$HOME/.local/share/minsh/help/"
+
+selected_file=$(fd --type file . "$HELP_DIR" | fzf)
+
+if [ -n "$selected_file" ]; then
+  bat "$selected_file"
+fi

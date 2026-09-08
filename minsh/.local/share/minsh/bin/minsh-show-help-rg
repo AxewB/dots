@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+HELP_DIR="$HOME/.local/share/minsh/help/"
+SEARCH_PROMPT="$1"
+
+if [ -z "$SEARCH_PROMPT" ]; then
+  echo "Usage: $0 <search_term>" >&2
+  exit 1
+fi
+
+# Вариант A: через ripgrep (быстрее и удобнее для поиска по содержимому)
+selected_file=$(rg --files-with-matches --no-messages "$SEARCH_PROMPT" "$HELP_DIR" | fzf)
+
+# Вариант B (альтернатива, если нет rg):
+# selected_file=$(fd --type file --exec grep -l -- "$SEARCH_PROMPT" {} \; 2>/dev/null | fzf)
+
+if [ -n "$selected_file" ]; then
+  nvim "$selected_file"
+fi
