@@ -1,15 +1,16 @@
 require("plugins.langmapper") -- required to be on top
+
 -- nvim base config
 require("base.settings")
 require("base.bindings")
 require("base.lsp")
 require("base.commands")
 
+-- base16 theme
+require("theme")
+
 -- language specific
 require("base.language-specific.gdscript")
-
--- if using Neovide
-require("clients.neovide")
 
 -- plugins
 require("plugins.suda")
@@ -22,23 +23,21 @@ require("plugins.conform")
 require("plugins.lazydev")
 require("plugins.live-rename")
 require("plugins.mason")
--- require("plugins.mini-comment")
 require("plugins.mini-ai")
 require("plugins.mini-align")
 require("plugins.mini-bracketed")
-require("plugins.mini-move")
 require("plugins.oil")
 require("plugins.sibling-swap")
-require("plugins.nvim-autopairs") -- idk why but it started putting cursor after closing part
+require("plugins.nvim-autopairs")
 require("plugins.nvim-ts-autotag")
 require("plugins.fidget")
 require("plugins.nvim-highlight-colors")
 require("plugins.todo-comments")
-require("plugins.text-case")
 require("plugins.render-markdown")
 require("plugins.tiny-inlinde-diagnostics")
 require("plugins.gitsigns")
 require("plugins.barbar")
+require("plugins.differ")
 
 -- optional plugins
 require("plugins.lualine")
@@ -48,7 +47,6 @@ require("plugins.nvim-surround")
 require("plugins.img-clip")
 require("plugins.repeat")
 require("plugins.tmux")
-
 
 require("plugins.language-specific.godot")
 -- require("plugins.language-specific.d2")
@@ -62,6 +60,3 @@ require("plugins.fun.tiny-glimmer")
 -- my plugins
 require("plugins.edit_config")
 require("plugins.move_with_fzf")
-
--- base16 theme
-require("theme")
