@@ -15,12 +15,12 @@ function zvm_after_init() {
   bindkey -M vicmd -r '^P'
   bindkey -M vicmd -r '^N'
   bindkey -M vicmd -r '^_'
+  bindkey -M vicmd -r ':'
 
   # insert mode
   bindkey -M viins -r '^P'
   bindkey -M viins -r '^N'
   bindkey -M viins -r '^_'
-
 }
 
 # reinitialize fzf binds
