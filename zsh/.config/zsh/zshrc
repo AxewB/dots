@@ -33,7 +33,6 @@ compinit -C
 # ------------------------------
 # Tools initialization
 # ------------------------------
-command -v starship >/dev/null && eval "$(starship init zsh)"
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 command -v try >/dev/null && eval "$(try init ~/Work/tries)"
 
@@ -42,6 +41,7 @@ command -v try >/dev/null && eval "$(try init ~/Work/tries)"
 # -------------------------------
 
 # plugins
+source "$ZSH_CONFIG_DIR/plugins/powerlevel10k.zsh"
 source "$ZSH_CONFIG_DIR/plugins/fast-syntax-highlighting.zsh"
 source "$ZSH_CONFIG_DIR/plugins/zsh-autosuggestions.zsh"
 source "$ZSH_CONFIG_DIR/plugins/zsh-helix-mode.zsh"
