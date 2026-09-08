@@ -4,3 +4,141 @@ language-servers = ["rust-analyzer"]
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"
+
+[[language]]
+name = "cpp"
+formatter = { command = "clang-format" }
+
+[[language]]
+name = "c"
+formatter = { command = "clang-format" }
+
+[[language]]
+name = "lua"
+formatter = { command = "stylua", args = [
+  "--syntax",
+  "All",
+  "--column-width",
+  "80",
+  "--line-endings",
+  "Unix",
+  "--indent-type",
+  "Spaces",
+  "--indent-width",
+  "2",
+  "--quote-style",
+  "AutoPreferDouble",
+  "--call-parentheses",
+  "Always",
+  "--collapse-simple-statement",
+  "Never",
+  "--space-after-function-names",
+  "Never",
+  "--sort-requires",
+] }
+
+[[language]]
+name = "javascript"
+formatter = { command = "prettierd" }
+
+[[language]]
+name = "typescript"
+formatter = { command = "prettierd" }
+
+# [[language]]
+# name = "javascriptreact"
+# formatter = { command = "prettierd" }
+
+# [[language]]
+# name = "typescriptreact"
+# formatter = { command = "prettierd" }
+
+[[language]]
+name = "json"
+formatter = { command = "prettierd" }
+
+[[language]]
+name = "jsonc"
+formatter = { command = "prettierd" }
+
+[[language]]
+name = "python"
+formatter = { command = "ruff", args = [
+  "format",
+  "--stdin-filename",
+  "$FILENAME",
+  "-",
+] }
+# или если хотите использовать несколько команд последовательно, можно через скрипт
+
+[[language]]
+name = "markdown"
+formatter = { command = "mdformat", args = ["--wrap", "120"] }
+
+[[language]]
+name = "html"
+formatter = { command = "prettierd" }
+
+[[language]]
+name = "bash"
+formatter = { command = "shfmt" }
+
+
+[[language]]
+name = "yaml"
+formatter = { command = "yamlfix" }
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "css"
+formatter = { command = "prettierd" }
+
+[[language]]
+name = "scss"
+formatter = { command = "prettierd" }
+
+[[language]]
+name = "bash"
+formatter = { command = "shfmt" }
+
+[[language]]
+name = "xml"
+formatter = { command = "xmlformatter" }
+
+[[language]]
+name = "typst"
+formatter = { command = "typstyle", args = [
+  "--wrap-text",
+  "--indent-width",
+  "2",
+  "--line-width",
+  "75",
+  "--quiet",
+] }
+
+[[language]]
+name = "slint"
+formatter = { command = "slint-lsp" }
+
+[[language]]
+name = "nix"
+formatter = { command = "alejandra" }
+
+[[language]]
+name = "kdl"
+formatter = { command = "kdlfmt" }
+
+# [[language]]
+# name = "d2"
+# formatter = { command = "d2", args = ["fmt", "$FILENAME"] }
+
+[[language]]
+name = "gdscript"
+formatter = { command = "gdformat" }
+
+[[language]]
+name = "openscad"
+formatter = { command = "topiary", args = ["format", "$FILENAME"] }

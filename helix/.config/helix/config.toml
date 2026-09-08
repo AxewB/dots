@@ -12,16 +12,32 @@ color-modes = true
 popup-border = "none"
 clipboard-provider = "wayland"
 
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.gutters.line-numbers]
+min-width = 4
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
-# left = ["mode", "spinner"]
-center = []
-right = ["diagnostics", "selections", "register", "position", "position-percentage" ,"file-encoding"]
-# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-separator = "│"
-mode.normal = "N"
-mode.insert = "I"
-mode.select = "V"
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
+]
+center = ["spacer"]
+right = ["workspace-diagnostics", "position"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+separator = " "
 diagnostics = ["warning", "error"]
 workspace-diagnostics = ["warning", "error"]
 
@@ -30,7 +46,7 @@ space = "none"
 tab = "all"
 nbsp = "all"
 nnbsp = "all"
-newline = "all"
+newline = "none"
 
 [editor.whitespace.characters]
 space = "·"
@@ -38,7 +54,7 @@ nbsp = "⍽"
 nnbsp = "␣"
 tab = "→"
 newline = "⏎"
-tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+tabpad = "·"  # Tabs will look like "→···" (depending on tab width)
 
 [editor.indent-guides]
 render = true
