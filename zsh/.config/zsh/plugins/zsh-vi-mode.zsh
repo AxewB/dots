@@ -1,11 +1,29 @@
-# clearing bindings to use vi mode plugin without any interference between default vi mode in zsh and plugin
+# Очищаем привязки и создаем пустой контекст
+ZVM_LAZY_KEYBINDINGS=false
+
 bindkey -N empty main
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
-ZVM_SYSTEM_CLIPBOARD_ENABLED=true # Use system clipboard
-# ZVM_CURSOR_STYLE_ENABLED=false # always block cursor
 
-# reinitialize fzf binds for them to work in vi insert mode
+# Настройки плагина
+ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+ZVM_LINE_INIT_MODE="insert"
+
+# DISABLE some keybinds
+function zvm_after_init() {
+  # normal mode
+  bindkey -M vicmd -r '^P'
+  bindkey -M vicmd -r '^N'
+  bindkey -M vicmd -r '^_'
+
+  # insert mode
+  bindkey -M viins -r '^P'
+  bindkey -M viins -r '^N'
+  bindkey -M viins -r '^_'
+
+}
+
+# reinitialize fzf binds
 if command -v fzf >/dev/null; then
-  zvm_after_init_commands+=('source <(fzf --zsh)')
+    zvm_after_init_commands+=('source <(fzf --zsh)')
 fi
