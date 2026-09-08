@@ -7,7 +7,6 @@ zinit light jeffreytse/zsh-vi-mode
 
 # Настройки плагина
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true
-ZVM_LINE_INIT_MODE="insert"
 
 # DISABLE some keybinds
 function zvm_after_init() {

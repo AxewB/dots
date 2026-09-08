@@ -41,11 +41,14 @@ command -v try >/dev/null && eval "$(try init ~/Work/tries)"
 # Imports
 # -------------------------------
 
-source "$ZSH_CONFIG_DIR/functions.zsh"
-source "$ZSH_CONFIG_DIR/plugins/plugins.zsh"
-source "$ZSH_CONFIG_DIR/aliases.zsh"
-source "$ZSH_CONFIG_DIR/bindings.zsh"
-source "$ZSH_CONFIG_DIR/settings.zsh"
+# plugins
+source "$ZSH_CONFIG_DIR/plugins/fast-syntax-highlighting.zsh"
+source "$ZSH_CONFIG_DIR/plugins/zsh-autosuggestions.zsh"
+source "$ZSH_CONFIG_DIR/plugins/zsh-helix-mode.zsh"
+source "$ZSH_CONFIG_DIR/plugins/zsh-vi-mode.zsh"
+source "$ZSH_CONFIG_DIR/plugins/zsh-system-clipboard.zsh"
+
+# integrations
 source "$ZSH_CONFIG_DIR/integrations/eza.zsh"
 source "$ZSH_CONFIG_DIR/integrations/git.zsh"
 source "$ZSH_CONFIG_DIR/integrations/fzf.zsh"
@@ -55,7 +58,13 @@ source "$ZSH_CONFIG_DIR/integrations/tmux.zsh"
 source "$ZSH_CONFIG_DIR/integrations/ripgrep.zsh"
 source "$ZSH_CONFIG_DIR/integrations/pyenv.zsh"
 
-# auto launch `default` tmux session 
+# my settings
+source "$ZSH_CONFIG_DIR/functions.zsh"
+source "$ZSH_CONFIG_DIR/aliases.zsh"
+source "$ZSH_CONFIG_DIR/bindings.zsh"
+source "$ZSH_CONFIG_DIR/settings.zsh"
+
+# auto launch `default` tmux session
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
   tmux attach-session -t default || tmux new-session -s default
 fi
