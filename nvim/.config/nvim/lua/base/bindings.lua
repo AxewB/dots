@@ -1,7 +1,13 @@
 vim.cmd("nnoremap q: <nop>") -- disable command line history
 -- vim.keymap.set('n', '<M-r>', ':restart<CR><CR>')
 
-vim.keymap.set("n", "=", "0", { noremap = true, silent = true })
+-- vim.keymap.set("n", "=", "0", { noremap = true, silent = true })
+
+-- disable strange bindings in insert mode
+vim.keymap.set("i", "<C-h>", "<Nop>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-j>", "<Nop>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-k>", "<Nop>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-l>", "<Nop>", { noremap = true, silent = true })
 
 local function set_wrap()
   vim.opt.wrap = true
@@ -74,10 +80,6 @@ vim.keymap.set(
   "<Esc>:noh<CR>",
   { desc = "Clear last search by pressing ESC", silent = true }
 )
-
--- move code blocks in visual mode with JK
-vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv'")
-vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv'")
 
 -- Turn off diagnostic messages when it's not required (especially when I use python)
 vim.api.nvim_create_user_command("DiagnosticsToggleVirtualText", function()
