@@ -21,3 +21,12 @@ git submodule update --init --recursive
 ```
 
 
+## In the end
+
+For OpenSCAD config it is recommended to type this after stow:
+
+```sh
+git update-index --skip-worktree OpenSCAD/.config/OpenSCAD/OpenSCAD.conf
+```
+
+Otherwise git will always track all dynamically inserted lines by OpenSCAD itself.
