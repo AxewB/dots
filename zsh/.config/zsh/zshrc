@@ -42,7 +42,7 @@ command -v try >/dev/null && eval "$(try init ~/Work/tries)"
 # -------------------------------
 
 source "$ZSH_CONFIG_DIR/functions.zsh"
-source "$ZSH_CONFIG_DIR/plugins.zsh"
+source "$ZSH_CONFIG_DIR/plugins/plugins.zsh"
 source "$ZSH_CONFIG_DIR/aliases.zsh"
 source "$ZSH_CONFIG_DIR/bindings.zsh"
 source "$ZSH_CONFIG_DIR/integrations/eza.zsh"

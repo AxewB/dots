@@ -9,7 +9,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
 " --color=fg:#7c7b7d,header:#49cae4,info:#ffca58,pointer:#aee8f4"\
 " --color=marker:#aee8f4,fg+:#eae9eb,prompt:#ffca58,hl+:#49cae4"
 
-# load from data directory
+# load theme from data directory
 if [[ -f ~/.local/share/zsh/fzf_theme.sh ]]; then
   source ~/.local/share/zsh/fzf_theme.sh
 fi

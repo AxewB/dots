@@ -9,14 +9,3 @@ ZVM_SYSTEM_CLIPBOARD_ENABLED=true # Use system clipboard
 if command -v fzf >/dev/null; then
   zvm_after_init_commands+=('source <(fzf --zsh)')
 fi
-
-
-# zinit ice wait"0" lucid
-zinit light kutsan/zsh-system-clipboard
-
-# zinit ice wait"0" lucid
-zinit light zsh-users/zsh-autosuggestions
-
-# zinit ice wait"0" lucid
-zinit light zdharma-continuum/fast-syntax-highlighting
-
