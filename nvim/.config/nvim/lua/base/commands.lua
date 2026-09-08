@@ -1,22 +1,20 @@
 -- date and time insertion
--- vim.api.nvim_create_user_command(
---   "Date",
---   "put =strftime('%Y-%m-%d')",
---   { desc = "Insert date (YYYY-MM-DD)" }
--- )
---
--- vim.api.nvim_create_user_command(
---   "Time",
---   "put =strftime('%H-%M-%S')",
---   { desc = "Insert time (HH-MM-SS)" }
--- )
---
--- vim.api.nvim_create_user_command(
---   "DateTime",
---   "put =strftime('%Y-%m-%d_%H-%M-%S')",
---   { desc = "Insert datetime (YYYY-MM-DD_HH-MM-SS)" }
--- )
---
+vim.api.nvim_create_user_command(
+  "Date",
+  "put =strftime('%Y-%m-%d')",
+  { desc = "Insert date (YYYY-MM-DD)" }
+)
+vim.api.nvim_create_user_command(
+  "Time",
+  "put =strftime('%H:%M:%S')",
+  { desc = "Insert time (HH:MM:SS)" }
+)
+
+vim.api.nvim_create_user_command(
+  "DateTime",
+  "put =strftime('%Y-%m-%d %H-%M-%S')",
+  { desc = "Insert datetime (YYYY-MM-DD HH-MM-SS)" }
+)
 
 local saved_number = true
 local saved_relativenumber = false
