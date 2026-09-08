@@ -9,7 +9,7 @@ function GetEntries()
   local seen_fonts = {}
   local preview_text =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.'
-  local handle = io.popen('fc-list : family | head -100')
+  local handle = io.popen('fc-list : family')
   if handle then
     for line in handle:lines() do
       local font_name = line:match('^([^,]+)')
