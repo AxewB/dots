@@ -13,7 +13,7 @@ vim.pack.add({
 
 require("blink.cmp").setup({
   keymap = {
-    preset = "none",
+    preset = "enter",
     ["<Tab>"] = {
 
       function(cmp)

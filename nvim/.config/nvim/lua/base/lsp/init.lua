@@ -20,14 +20,7 @@ local function goto_next_diagnoctic(direction)
 end
 
 vim.diagnostic.config({
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = "",
-      [vim.diagnostic.severity.WARN] = "",
-      [vim.diagnostic.severity.HINT] = "",
-      [vim.diagnostic.severity.INFO] = "",
-    },
-  },
+  signs = false,
   update_in_insert = true,
   underline = true,
   severity_sort = true,
@@ -65,7 +58,7 @@ local servers = {
   "sqlls", -- sql
   "gdscript", -- godot
   "lemminx", -- xml
-  "openscad-lsp" -- OpenSCAD
+  "openscad-lsp", -- OpenSCAD
 }
 
 -- extending default LSP capabilities
@@ -97,7 +90,6 @@ for _, name in ipairs(servers) do
 end
 
 vim.lsp.config("*", { capabilities = base_capabilities })
-
 
 -- local function ShowDiagnosticsOrHover()
 --   local opts = { focusable = false }

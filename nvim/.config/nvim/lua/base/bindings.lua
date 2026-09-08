@@ -22,8 +22,8 @@ vim.keymap.set("n", "<leader>e", "<cmd>Explore<cr>")
 vim.keymap.set("n", "<leader>sw", set_wrap)
 vim.keymap.set("n", "<leader>sW", set_nowrap)
 
--- vim.keymap.set("n", "<S-h>", ":bprev<CR>", { desc = "Next buffer" })
--- vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Prev buffer" })
+vim.keymap.set("n", "<S-h>", ":bprev<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Prev buffer" })
 
 -- helix-like jump to start/end of the line
 -- vim.keymap.set("n", "gh", "0", { noremap = true, silent = true })

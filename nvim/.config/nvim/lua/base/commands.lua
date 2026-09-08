@@ -54,3 +54,7 @@ vim.api.nvim_create_user_command("ToggleSpell", function()
     vim.opt.spell = true
   end
 end, {})
+
+vim.api.nvim_create_user_command("UpdateAllPlugins", function()
+  vim.pack.update()
+end, {})

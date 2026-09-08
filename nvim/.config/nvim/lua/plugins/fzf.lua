@@ -43,7 +43,6 @@ require("fzf-lua").setup({
       horizontal = "right:40%", -- для широких
       flip_columns = 60,
 
-
       winopts = {
         number = true,
         relativenumber = false,
@@ -106,6 +105,7 @@ local fzf = require("fzf-lua")
 
 fzf.register_ui_select()
 
+
 -- stylua: ignore start
 vim.keymap.set("n", "<leader>f", function() fzf.files() end,                 { desc = "fzf-lua find files" })
 vim.keymap.set("n", "<leader>g", function() fzf.live_grep() end,             { desc = "fzf-lua live grep" })
@@ -116,8 +116,21 @@ vim.keymap.set("n", "<leader>c", function() fzf.commands() end,              { d
 vim.keymap.set("n", "<leader>k", function() fzf.keymaps() end,               { desc = "fzf-lua keymaps" })
 vim.keymap.set("n", "<leader>t", function() show_todos() end,                { desc = "fzf-lua keymaps" })
 vim.keymap.set("n", "<leader>T", function() show_todos(true) end,            { desc = "fzf-lua keymaps" })
-vim.keymap.set("n", "<leader>d", function() fzf.diagnostics_document() end,  { desc = "FzfLua Workspace Diagnostics" })
-vim.keymap.set("n", "<leader>D", function() fzf.diagnostics_workspace() end, { desc = "FzfLua Buffer Diagnostics" })
+vim.keymap.set("n", "<leader>d", function() fzf.diagnostics_document( {
+  actions = {
+      ["ctrl-y"] = function(selected)
+        vim.fn.setreg("+", selected[1])
+        vim.notify("Diagnostic copied to + register", vim.log.levels.INFO)
+      end,
+}}) end,  { desc = "FzfLua Workspace Diagnostics" })
+vim.keymap.set("n", "<leader>D", function() fzf.diagnostics_workspace( {
+  actions = {
+      ["ctrl-y"] = function(selected)
+        vim.fn.setreg("+", selected[1])
+        vim.notify("Diagnostic copied to + register", vim.log.levels.INFO)
+      end,
+}}) end, { desc = "FzfLua Buffer Diagnostics" })
+
 -- stylua: ignore end
 
 -- LSP keymaps when lsp attached

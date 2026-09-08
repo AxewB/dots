@@ -36,7 +36,7 @@ vim.opt.clipboard = "unnamedplus" -- yank into system clipboard
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
-vim.opt.signcolumn = "no" -- remove jittering when plugins use this column
+vim.opt.signcolumn = "yes" -- remove jittering when plugins use this column
 
 -- show invisible symbols
 vim.opt.list = true
