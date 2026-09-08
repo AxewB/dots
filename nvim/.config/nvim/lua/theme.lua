@@ -10,15 +10,12 @@ local ok, clrs = pcall(dofile, theme_path)
 if ok then
   flavours_colors = clrs
 else
-  vim.api.nvim_echo(
+  vim.api.nvim_echo({
     {
-      {
-        "There is no theme in " .. theme_path .. ". Using predefined one",
-        "WarningMsg",
-      },
+      "There is no theme in " .. theme_path .. ". Using predefined one",
+      "WarningMsg",
     },
-    true
-  )
+  }, true)
 end
 
 local colors = flavours_colors
@@ -38,8 +35,8 @@ local colors = flavours_colors
     base0C = "#aee8f4",
     base0D = "#49cae4",
     base0E = "#a093e2",
-    base0F = "#ff8787"
-}
+    base0F = "#ff8787",
+  }
 
 require("base16-colorscheme").setup({
   base00 = colors.base00,

@@ -11,8 +11,8 @@ return {
         enable = true,
       },
       diagnostics = {
-        enable = true;
-        enableExperimental = false,  -- уберёт typed_hole паники
+        enable = true,
+        enableExperimental = false, -- уберёт typed_hole паники
       },
       logging = {
         level = "ERROR",

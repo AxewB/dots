@@ -46,7 +46,7 @@ require("conform").setup({
     },
     topiary = {
       command = "topiary",
-      args = { "format", "$FILENAME"}
+      args = { "format", "$FILENAME" },
     },
     d2_fmt = {
       command = "d2",

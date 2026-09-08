@@ -34,6 +34,7 @@ require("blink.cmp").setup({
 
     ["<C-k>"] = { "select_prev", "fallback" },
     ["<C-j>"] = { "select_next", "fallback" },
+
     ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
   },
   appearance = {

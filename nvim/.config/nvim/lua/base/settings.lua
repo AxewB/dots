@@ -52,7 +52,6 @@ vim.opt.listchars = {
   precedes = "⟨",
 }
 
-
 -- enable 0.12 new ui feature
 require("vim._core.ui2").enable({})
 
@@ -96,7 +95,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.cmd("packadd nvim.difftool")
   end,
 })
-
 
 -- italic comments
 vim.o.termguicolors = true

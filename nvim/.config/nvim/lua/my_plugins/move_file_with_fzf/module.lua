@@ -31,7 +31,11 @@ local function move_file_callback(cur_filepath, target_dir)
   local ok, err = vim.uv.fs_unlink(cur_filepath)
 
   if not ok then
-    vim.api.nvim_echo({ { "Error while deleting old file: ", "ErrorMsg" } }, true, {})
+    vim.api.nvim_echo(
+      { { "Error while deleting old file: ", "ErrorMsg" } },
+      true,
+      {}
+    )
     return
   end
 
@@ -45,7 +49,11 @@ local function move_file()
   local cur_filepath = get_current_buf_path()
 
   if cur_filepath == "" then
-    vim.api.nvim_echo({ { "Save current buffer first before moving" } }, false, {})
+    vim.api.nvim_echo(
+      { { "Save current buffer first before moving" } },
+      false,
+      {}
+    )
     return
   end
 

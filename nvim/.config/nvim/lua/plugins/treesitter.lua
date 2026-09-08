@@ -101,7 +101,6 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   end,
 })
 
-
 -- text objects
 local function select_function_outer()
   require("nvim-treesitter-textobjects.select").select_textobject(

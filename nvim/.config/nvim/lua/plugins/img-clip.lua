@@ -1,8 +1,8 @@
 vim.pack.add({
-  { src = 'https://github.com/hakonharnes/img-clip.nvim' },
+  { src = "https://github.com/hakonharnes/img-clip.nvim" },
 })
 
-require('img-clip').setup({
+require("img-clip").setup({
   filetypes = {
     typst = {
       template = [[
@@ -12,4 +12,9 @@ image("$FILE_PATH")
   },
 })
 
-vim.keymap.set({ 'n', 'i' }, '<C-S-p>', '<cmd>PasteImage<cr>', { desc = 'Paste image from system clipboard' })
+vim.keymap.set(
+  { "n", "i" },
+  "<C-S-p>",
+  "<cmd>PasteImage<cr>",
+  { desc = "Paste image from system clipboard" }
+)

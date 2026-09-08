@@ -1,8 +1,8 @@
 return {
-  filetypes = { 'typst' },
-  cmd = { 'tinymist' },
+  filetypes = { "typst" },
+  cmd = { "tinymist" },
   root_markers = {
-    'main.typ',
-    '.git',
+    "main.typ",
+    ".git",
   },
 }

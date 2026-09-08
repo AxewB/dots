@@ -1,17 +1,17 @@
 vim.pack.add({
-  { src = 'https://github.com/jackplus-xyz/player-one.nvim' },
+  { src = "https://github.com/jackplus-xyz/player-one.nvim" },
 })
 
-require('player-one').setup({
+require("player-one").setup({
   is_enabled = true,
   min_interval = 0.05,
-  theme = 'chiptune', -- "chiptune", "crystal", "synth"
+  theme = "chiptune", -- "chiptune", "crystal", "synth"
   master_volume = 0.1,
   debug = false,
   theme_config = {
     chiptune = {
-      CursorMoved = true
-    }
+      CursorMoved = true,
+    },
   },
   binary = {
     auto_update = true,

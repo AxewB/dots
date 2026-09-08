@@ -1,4 +1,4 @@
 vim.pack.add({
-  { src = 'https://github.com/echasnovski/mini.comment' },
+  { src = "https://github.com/echasnovski/mini.comment" },
 })
-require('mini.comment').setup({})
+require("mini.comment").setup({})

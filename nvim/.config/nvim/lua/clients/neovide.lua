@@ -1,5 +1,5 @@
 if vim.g.neovide then
-  vim.o.guifont = 'CaskaydiaMono Nerd Font'
+  vim.o.guifont = "CaskaydiaMono Nerd Font"
   -- vim.o.guifont = "IosevkaTerm Nerd Font Mono"
 
   -- floating window blur
@@ -18,6 +18,6 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_mode = {
     -- 'railgun',
     -- 'torpedo',
-    'pixiedust',
+    "pixiedust",
   }
 end
