@@ -16,6 +16,8 @@ vim.api.nvim_create_user_command(
   { desc = "Insert datetime (YYYY-MM-DD HH-MM-SS)" }
 )
 
+vim.api.nvim_create_user_command("W", ":write", { desc = "Alias to :w" })
+
 local saved_number = true
 local saved_relativenumber = false
 local saved_signcolumn = "auto"
