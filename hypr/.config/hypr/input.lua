@@ -13,6 +13,5 @@ hl.config({
   },
 })
 
-
 -- windowrule = scrolltouchpad 1.5, class:(Alacritty|kitty)
 -- windowrule = scrolltouchpad 0.2, class:com.mitchellh.ghostty

@@ -23,7 +23,6 @@ for i = 0, 9 do
   )
 end
 
-
 -- # Move workspaces to other monitors
 -- hl.bind("$TRPL + LEFT", movecurrentworkspacetomonitor, l, {description = "Move workspace to left monitor"})
 -- hl.bind("$TRPL + RIGHT", movecurrentworkspacetomonitor, r, {description = "Move workspace to right monitor"})
