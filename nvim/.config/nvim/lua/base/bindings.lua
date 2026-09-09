@@ -9,6 +9,12 @@ vim.keymap.set("i", "<C-j>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-k>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-l>", "<Nop>", { noremap = true, silent = true })
 
+-- replace default moves to start/end of the line
+vim.keymap.set("n", "$", "<nop>")
+vim.keymap.set("n", "gl", "$", { desc = "Go to end of line" })
+vim.keymap.set("n", "0", "<nop>")
+vim.keymap.set("n", "gh", "0", { desc = "Go to start of line" })
+
 local function set_wrap()
   vim.opt.wrap = true
   vim.opt.linebreak = true
