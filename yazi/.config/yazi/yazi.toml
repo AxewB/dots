@@ -1,3 +1,16 @@
+[mgr]
+sort_sensitive = false
+sort_dir_first = true
+sort_by = "natural"
+sort_translit = true
+show_hidden = true
+show_symlink = true
+scrolloff = 99
+
+[preview]
+wrap = "no"
+tab_size = 2
+
 [opener]
 edit = [
   { run = 'nvim "$@"', block = true, desc = "Neovim", for = "unix" },
@@ -8,3 +21,6 @@ play = [
   # { run = 'ffplay "$@"', block = true, desc = "FFplay", for = "macos" }
   { run = "ffplay %1", block = true, desc = "FFplay", for = "windows" },
 ]
+
+[input]
+cursor_blink = false
