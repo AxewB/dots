@@ -41,7 +41,7 @@ vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Prev buffer" })
 -- vim.keymap.set("n", "gh", "0", { noremap = true, silent = true })
 -- vim.keymap.set("n", "gl", "$", { noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>q", ":bd<cr>", { desc = "Close buffer" })
+vim.keymap.set("n", "<C-q>", ":bd<cr>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader>Q", ":qa<cr>", { desc = "Exit neovim" })
 
 vim.keymap.set("n", "<leader>u", "<CMD>Undotree<CR>")
