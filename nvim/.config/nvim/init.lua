@@ -12,6 +12,8 @@ require("theme")
 -- language specific
 require("base.language-specific.gdscript")
 
+
+require("plugins.repeat")
 -- plugins
 require("plugins.suda")
 require("plugins.snacks")
@@ -37,12 +39,11 @@ require("plugins.gitsigns")
 require("plugins.barbar")
 require("plugins.differ")
 require("plugins.lualine")
-require("plugins.multicursor")
 require("plugins.markdown-plus")
 require("plugins.nvim-surround")
 require("plugins.img-clip")
-require("plugins.repeat")
 require("plugins.tmux")
+require("plugins.multicursor")
 
 require("plugins.language-specific.godot")
 -- require("plugins.language-specific.d2")
@@ -56,3 +57,8 @@ require("plugins.fun.tiny-glimmer")
 -- my plugins
 require("plugins.edit_config")
 require("plugins.move_with_fzf")
+
+
+local lm = require("langmapper")
+lm.automapping({ global = true, buffer = true })
+lm.hack_get_keymap()

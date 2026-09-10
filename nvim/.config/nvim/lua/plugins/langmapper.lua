@@ -35,5 +35,3 @@ lm.setup({
   },
 })
 
-lm.automapping({ global = true, buffer = true })
-lm.hack_get_keymap()
