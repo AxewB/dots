@@ -7,11 +7,10 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.encoding = "utf8"
 
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.smoothscroll = false
 -- vim.opt.colorcolumn = "80"
 vim.opt.scrolloffpad = 1
--- vim.opt.guicursor = "a:block"
 
 -- SEARCH settings
 -- ignore case in search
@@ -30,7 +29,7 @@ vim.opt.splitright = true
 
 -- centering cursor
 vim.opt.scrolloff = 99
-vim.opt.sidescrolloff = 99
+vim.opt.sidescrolloff = 8
 vim.opt.clipboard = "unnamedplus" -- yank into system clipboard
 
 -- line numberd and relative line numbers
