@@ -30,7 +30,7 @@ require("oil").setup({
   },
   keymaps = {
     ["<leader>e"] = { "actions.close", mode = "n" },
-    ["<leader>q"] = { "actions.close", mode = "n" },
+    ["<C-q>"] = { "actions.close", mode = "n" },
 
     [";"] = { "actions.select", mode = "n" },
 
@@ -40,6 +40,8 @@ require("oil").setup({
     ["<C-l>"] = "actions.refresh",
 
     ["-"] = { "actions.parent", mode = "n" },
+    ["<BS>"] = { "actions.parent", mode = "n" },
+
     ["_"] = { "actions.open_cwd", mode = "n" },
 
     ["gs"] = { "actions.change_sort", mode = "n" },
