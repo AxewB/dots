@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.opt.timeout = false
 vim.g.maplocalleader = "\\"
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
